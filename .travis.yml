@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -f -t harfoh/docker-react Dockerfile.dev .
+  - docker build -t harfoh/docker-react -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true harfoh/docker-react npm run test
